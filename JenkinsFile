@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('CLONE') { 
             steps {
+                sh "echo THIS IS MY FIRST PIPELINE"
                 sh "sudo rm -rf helloWordNodejs"
                 sh "git clone https://github.com/jatinnandwani/helloWordNodejs.git"
             }
