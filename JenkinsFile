@@ -1,0 +1,17 @@
+pipeline {
+    agent any 
+    stages {
+        stage('CLONE') { 
+            steps {
+                sh "sudo rm -rf helloWordNodejs"
+                sh "git clone https://github.com/jatinnandwani/helloWordNodejs.git"
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                sh "cd helloWordNodejs"
+                sh "node helloWordNodejs/index.js"
+            }
+        }
+    }
+}
