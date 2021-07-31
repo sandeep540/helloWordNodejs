@@ -11,7 +11,8 @@ pipeline {
 		  stage('TEST1') { 
             steps {
                 echo '-----------------TEST1 STAGE EXECUTION ------------------------'
-            }
+            	sh "git clone https://github.com/jatinnandwani/helloWordNodejs.git"
+	    }
         }
         stage('TEST2') { 
             steps {
